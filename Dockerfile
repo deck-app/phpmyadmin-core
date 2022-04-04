@@ -46,4 +46,5 @@ WORKDIR $PHPMYADMIN_DIR
 EXPOSE 80
 
 ADD entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
