@@ -1,0 +1,9 @@
+version: "3"
+services:
+  apache:
+    build:
+      context: '.'
+      dockerfile: 'Dockerfile'
+    ports:
+      - '${PHPMY_HTTP_PORT}:80'
+volumes: {}
