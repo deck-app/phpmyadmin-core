@@ -2,7 +2,7 @@ FROM alpine:3.12
 
 ENV PHPMYADMIN_VERSION 4.9.7
 
-ENV PHPMYADMIN_DIR /usr/share/webapps/phpmyadmin/
+ENV PHPMYADMIN_DIR /var/www/localhost/htdocs/
 ENV PHPMYADNIN_PACKAGE phpMyAdmin-$PHPMYADMIN_VERSION-english
 ENV PHPMYADMIN_DOWNLOAD https://files.phpmyadmin.net/phpMyAdmin/$PHPMYADMIN_VERSION/$PHPMYADNIN_PACKAGE.tar.gz
 
