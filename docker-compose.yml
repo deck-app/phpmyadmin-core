@@ -4,6 +4,8 @@ services:
     build:
       context: '.'
       dockerfile: 'Dockerfile'
+    environment:
+      - PMA_ARBITRARY=1
     ports:
       - '${PHPMY_HTTP_PORT}:80'
 volumes: {}

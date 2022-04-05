@@ -2,7 +2,7 @@ FROM alpine:3.12
 
 ENV PHPMYADMIN_VERSION 4.9.7
 
-ENV PHPMYADMIN_DIR /var/www/localhost/htdocs/
+ENV PHPMYADMIN_DIR /usr/share/webapps/phpmyadmin/
 ENV PHPMYADNIN_PACKAGE phpMyAdmin-$PHPMYADMIN_VERSION-english
 ENV PHPMYADMIN_DOWNLOAD https://files.phpmyadmin.net/phpMyAdmin/$PHPMYADMIN_VERSION/$PHPMYADNIN_PACKAGE.tar.gz
 
@@ -38,12 +38,17 @@ RUN \
 ADD config.inc.php $PHPMYADMIN_DIR
 ADD config.secret.inc.php $PHPMYADMIN_DIR
 ADD phpmyadmin.conf /etc/apache2/conf.d/
+ADD httpd.conf /etc/apache2/
+RUN chmod +x /etc/apache2/httpd.conf
+# RUN chmod +x /var/www/localhost/htdocs/config.inc.php
 
 RUN mkdir -p /run/apache2
 
 WORKDIR $PHPMYADMIN_DIR
 
 EXPOSE 80
+ADD index.html /var/www/localhost/htdocs/
+RUN chmod +x /var/www/localhost/htdocs/index.html
 
 ADD entrypoint.sh /
 RUN chmod +x /entrypoint.sh
