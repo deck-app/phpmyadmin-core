@@ -147,6 +147,6 @@ if (isset($_ENV['MEMORY_LIMIT'])) {
 }
 
 /* Include User Defined Settings Hook */
-if (file_exists('/etc/phpmyadmin/config.user.inc.php')) {
-    include('/etc/phpmyadmin/config.user.inc.php');
+if (file_exists('config.user.inc.php')) {
+    include('config.user.inc.php');
 }
