@@ -137,6 +137,7 @@ $i--;
 /* Uploads setup */
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
+$cfg['PmaNoRelation_DisableWarning'] = TRUE;
 
 if (isset($_ENV['MAX_EXECUTION_TIME'])) {
     $cfg['ExecTimeLimit'] = $_ENV['MAX_EXECUTION_TIME'];
