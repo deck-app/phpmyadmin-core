@@ -24,8 +24,7 @@ ENV REQUIRED_PACKAGES \
   wget
 
 RUN \
-  apk add -U --no-cache $REQUIRED_PACKAGES && \
-  rm /usr/bin/php7
+  apk add -U --no-cache $REQUIRED_PACKAGES 
 
 RUN \
   mkdir -p /usr/share/webapps && \
