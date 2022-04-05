@@ -20,7 +20,8 @@ ENV REQUIRED_PACKAGES \
   php7-openssl \
   php7-session \
   php7-zip \
-  php7-zlib
+  php7-zlib \
+  wget
 
 RUN \
   apk add -U --no-cache $REQUIRED_PACKAGES && \
