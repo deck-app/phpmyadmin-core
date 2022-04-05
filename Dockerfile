@@ -37,6 +37,7 @@ RUN \
 
 ADD config.inc.php $PHPMYADMIN_DIR
 ADD config.secret.inc.php $PHPMYADMIN_DIR
+ADD config.user.inc.php $PHPMYADMIN_DIR
 ADD phpmyadmin.conf /etc/apache2/conf.d/
 ADD httpd.conf /etc/apache2/
 RUN chmod +x /etc/apache2/httpd.conf
