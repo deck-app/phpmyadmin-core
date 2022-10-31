@@ -1,1 +1,1 @@
-### phpMyAdmin on Alpine 3.12
+### Official phpMyAdmin Docker image

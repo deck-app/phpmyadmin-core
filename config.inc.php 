@@ -1,6 +1,6 @@
 <?php
 
-require('config.secret.inc.php');
+require('/etc/phpmyadmin/config.secret.inc.php');
 
 /* Ensure we got the environment */
 $vars = array(
@@ -137,7 +137,6 @@ $i--;
 /* Uploads setup */
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
-$cfg['PmaNoRelation_DisableWarning'] = TRUE;
 
 if (isset($_ENV['MAX_EXECUTION_TIME'])) {
     $cfg['ExecTimeLimit'] = $_ENV['MAX_EXECUTION_TIME'];
@@ -148,6 +147,6 @@ if (isset($_ENV['MEMORY_LIMIT'])) {
 }
 
 /* Include User Defined Settings Hook */
-if (file_exists('config.user.inc.php')) {
-    include('config.user.inc.php');
+if (file_exists('/etc/phpmyadmin/config.user.inc.php')) {
+    include('/etc/phpmyadmin/config.user.inc.php');
 }
