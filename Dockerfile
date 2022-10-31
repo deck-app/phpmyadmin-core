@@ -40,9 +40,9 @@ RUN set -ex; \
 
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php
-ENV MAX_EXECUTION_TIME 600
-ENV MEMORY_LIMIT 512M
-ENV UPLOAD_LIMIT 2048K
+ENV MAX_EXECUTION_TIME 6000
+ENV MEMORY_LIMIT -1
+ENV UPLOAD_LIMIT 1024M
 RUN set -ex; \
     \
     { \
