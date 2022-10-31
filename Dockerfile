@@ -14,6 +14,7 @@ RUN set -ex; \
         libwebp-dev \
         libxpm-dev \
         libzip-dev \
+        nano \
     ; \
     \
     docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm; \
