@@ -1,1 +1,1 @@
-### Official phpMyAdmin Docker image
+### Custom phpMyAdmin Docker image
