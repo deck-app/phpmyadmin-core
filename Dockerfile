@@ -10,24 +10,23 @@ ENV PHPMYADMIN_DOWNLOAD https://files.phpmyadmin.net/phpMyAdmin/$PHPMYADMIN_VERS
 
 ENV REQUIRED_PACKAGES \
   apache2 \
-  php8 \
-  php8-apache2 \
-  php8-bz2 \
-  php8-ctype \
-  php8-gd \
-  php8-json \
-  php8-mbstring \
-  php8-pecl-mcrypt \
-  php8-mysqli \
-  php8-openssl \
-  php8-session \
-  php8-zip \
-  bash \
-  php8-zlib
+  php7 \
+  php7-apache2 \
+  php7-bz2 \
+  php7-ctype \
+  php7-gd \
+  php7-json \
+  php7-mbstring \
+  php7-mcrypt \
+  php7-mysqli \
+  php7-openssl \
+  php7-session \
+  php7-zip \
+  php7-zlib
 
 RUN \
   apk add -U --no-cache $REQUIRED_PACKAGES && \
-  rm /usr/bin/php8
+  rm /usr/bin/php7
 
 RUN \
   mkdir -p /usr/share/webapps && \
