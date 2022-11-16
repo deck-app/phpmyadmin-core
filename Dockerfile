@@ -1,4 +1,4 @@
-FROM alpine:3.16
+FROM alpine:3.12
 LABEL maintainer Naba Das <hello@get-deck.com>
 
 ENV RELEASE_DATE 2022-11-16
