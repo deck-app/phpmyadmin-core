@@ -2,7 +2,7 @@ FROM alpine:3.16
 LABEL maintainer Naba Das <hello@get-deck.com>
 
 ENV RELEASE_DATE 2022-11-16
-ENV PHPMYADMIN_VERSION 5.2.0
+ENV PHPMYADMIN_VERSION 4.9.7
 
 ENV PHPMYADMIN_DIR /usr/share/webapps/phpmyadmin/
 ENV PHPMYADNIN_PACKAGE phpMyAdmin-$PHPMYADMIN_VERSION-english
